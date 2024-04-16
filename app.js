@@ -58,6 +58,16 @@ const options = {
         url: "https://eduphoria-mern-backend.onrender.com/",
       },
     ],
+    components: {
+      securitySchemes: {
+          BearerAuth: {
+              type: "http",
+              scheme: "bearer",
+              bearerFormat: "JWT",
+              value: "Bearer <JWT token here>"
+          }
+      }
+  }
   },
   apis: ['./routes/*.js'],
 };
