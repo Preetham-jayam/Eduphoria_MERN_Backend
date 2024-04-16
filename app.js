@@ -20,7 +20,7 @@ const accessLogStream = rfs.createStream('access.log', {
 app.use(morgan('combined', { stream: accessLogStream }));
 
 const corsOptions = {
-  origin: ['https://eduphoria-mern-frontend.onrender.com/','http://localhost:3000/'],
+  origin: 'https://eduphoria-mern-frontend.vercel.app/',
 };
 
 app.use(cors(corsOptions));
