@@ -82,6 +82,9 @@ app.use(
 )
 
 
+app.get('/',(req,res)=>{
+  res.send('API is running');
+});
 
 
 app.use((req, res, next) => {
@@ -102,6 +105,7 @@ app.use((error, req, res, next) => {
   res.status(error.code || 500);
   res.json({ message: error.message || 'An unknown error occurred!' });
 });
+
 
 
 
